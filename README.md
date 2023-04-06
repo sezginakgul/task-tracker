@@ -11,3 +11,5 @@
 - React.js
 - TypeScript
 - Axios
+- Node.js
+- Express.js
