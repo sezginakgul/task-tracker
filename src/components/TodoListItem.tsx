@@ -13,19 +13,19 @@ const TodoListItem: React.FC<IListItem> = ({
 }) => {
   return (
     <>
-      {item.isDone ? (
+      {item.completed ? (
         <li style={{ borderBottom: "4px solid red" }}>
           <p className="checked" onClick={() => toggleTodo(item)}>
             {item.task}
           </p>
-          <span className="task-icons" onClick={() => deleteTodo(item.id)}>
+          <span className="task-icons" onClick={() => deleteTodo(item._id)}>
             ✖️
           </span>
         </li>
       ) : (
         <li style={{ borderBottom: "4px solid #f0ddbc95" }}>
           <p onClick={() => toggleTodo(item)}>{item.task}</p>
-          <span className="task-icons" onClick={() => deleteTodo(item.id)}>
+          <span className="task-icons" onClick={() => deleteTodo(item._id)}>
             ✖️
           </span>
         </li>

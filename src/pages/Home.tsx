@@ -3,7 +3,7 @@ import React, { useEffect, useState } from "react";
 import InputForm from "../components/InputForm";
 import TodoList from "../components/TodoList";
 
-const url = "https://63878fa2e399d2e47302d660.mockapi.io/task-tracker";
+const url = "https://task-tracker-backend-0j8q.onrender.com/api/todo";
 
 const Home = () => {
   const [todos, setTodos] = useState<TodoType[]>([]);
@@ -20,7 +20,7 @@ const Home = () => {
   const AddTodo: AddFn = async (text) => {
     const newTodo = {
       task: text,
-      isDone: false,
+      completed: false,
     };
 
     try {
@@ -33,7 +33,10 @@ const Home = () => {
 
   const toggleTodo: ToggleFn = async (item) => {
     try {
-      await axios.put(`${url}/${item.id}`, { ...item, isDone: !item.isDone });
+      await axios.put(`${url}/${item._id}`, {
+        ...item,
+        completed: !item.completed,
+      });
       getTodos();
     } catch (error) {
       console.log(error);

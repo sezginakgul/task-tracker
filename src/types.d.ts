@@ -1,7 +1,8 @@
 interface TodoType {
-  id: string | number;
+  _id: string | number;
   task: string;
-  isDone: boolean;
+  completed: boolean;
+  _v: number;
 }
 
 interface ITodoList {

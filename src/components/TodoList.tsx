@@ -3,7 +3,7 @@ import TodoListItem from "./TodoListItem";
 import { useAutoAnimate } from "@formkit/auto-animate/react";
 
 const TodoList: React.FC<ITodoList> = ({ todos, toggleTodo, deleteTodo }) => {
-  console.log(todos);
+  // console.log(todos);
   const [animationParent] = useAutoAnimate();
 
   return (
@@ -11,7 +11,7 @@ const TodoList: React.FC<ITodoList> = ({ todos, toggleTodo, deleteTodo }) => {
       {todos.length ? (
         todos.map((item) => (
           <TodoListItem
-            key={item.id}
+            key={item._id}
             item={item}
             toggleTodo={toggleTodo}
             deleteTodo={deleteTodo}
