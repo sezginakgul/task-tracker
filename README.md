@@ -3,6 +3,10 @@
 ### Description
 
 Full Stack Task Tracker project.
+</br>
+Frontend: React.js / TypeScript
+</br>
+Backend: Node.js / Express.js
 
 ### Links
 
