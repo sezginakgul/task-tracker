@@ -1,5 +1,9 @@
 # task-tracker
 
+### Description
+
+Full Stack Task Tracker project.
+
 ### Links
 
 - Live: [Live Website](https://task-tracker-typescript.vercel.app/)
